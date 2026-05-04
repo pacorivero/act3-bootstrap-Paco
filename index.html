@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bar La Piscina – Tapas y buen ambiente en el Polideportivo de Espartinas. Cruzcampo, Coca‑Cola y cocina casera. ¡Ven a conocernos!">
+  <meta name="keywords" content="bar, piscina, espartinas, polideportivo, tapas, montaditos, paella, carnes, pescado frito, Cruzcampo, Coca-Cola">
+  <meta name="author" content="Bar La Piscina">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="logo.jpg" type="image/jpeg">
+  <link rel="shortcut icon" href="logo.jpg" type="image/jpeg">
+  <title>Bar La Piscina – Tapas, cerveza y buen rollo en Espartinas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    h1, h2, h3, .navbar-brand {
+      font-family: 'Oswald', sans-serif;
+    }
+    .bg-primary-custom {
+      background-color: #C8102E;
+    }
+    .text-primary-custom {
+      color: #C8102E;
+    }
+    .btn-gold {
+      background-color: #EAAA00;
+      color: #000;
+      border: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn-gold:hover {
+      background-color: #cf9b00;
+      color: #fff;
+    }
+    .hero-section {
+      background: url('bar.jpg') center/cover no-repeat;
+      min-height: 70vh;
+      position: relative;
+    }
+    .hero-overlay {
+      background: rgba(0,0,0,0.55);
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .beer-image {
+      max-height: 280px;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+      transition: transform 0.3s;
+    }
+    .beer-image:hover {
+      transform: scale(1.05);
+    }
+    .phone-link {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .phone-link:hover {
+      color: #EAAA00;
+    }
+    .card-custom {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .local-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+    .local-img:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra superior -->
+  <div class="bg-dark text-white py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="tel:645390821" class="phone-link"><i class="bi bi-telephone-fill me-2"></i>645 39 08 21</a>
+      <div>
+        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.jpg" alt="Bar La Piscina logo" width="40" height="40" class="me-2 rounded-circle">
+        <span data-translate="brand">Bar La Piscina</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio" data-translate="nav-inicio">🏠 Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#carta" data-translate="nav-carta">📋 Carta</a></li>
+          <li class="nav-item"><a class="nav-link" href="#horario" data-translate="nav-horario">🕒 Horario</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ubicacion" data-translate="nav-ubicacion">📍 Dónde estamos</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-translate="lang">🌐 Idioma</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#" onclick="setLanguage('es')">🇪🇸 Español</a></li>
+              <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">🇬🇧 English</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="inicio" class="hero-section d-flex align-items-center">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content text-center text-white py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h1 class="display-3 fw-bold text-uppercase" data-translate="hero-title">🍻 Bar La Piscina</h1>
+          <p class="lead mt-3" data-translate="hero-text">Tapas caseras, Cruzcampo bien fría y el mejor ambiente junto al polideportivo</p>
+          <a href="#carta" class="btn btn-gold btn-lg mt-3 me-2" data-translate="btn-carta">📋 Ver carta</a>
+          <a href="tel:645390821" class="btn btn-outline-light btn-lg mt-3" data-translate="btn-llamar">📞 Llamar ahora</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Bienvenida -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3" data-translate="welcome-title">👋 Bienvenidos al Bar La Piscina</h2>
+      <p class="lead" data-translate="welcome-text">
+        En el corazón del Polideportivo de Espartinas, te ofrecemos desayunos desde las 8:30, almuerzos de cuchara, tapas variadas y la mejor compañía. Productos frescos, cocina de siempre y, por supuesto, <strong>Cruzcampo Especial siempre a punto</strong>. ¡Ven en familia o con amigos!
+      </p>
+    </div>
+  </section>
+
+  <!-- Cómo es el local -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" data-translate="local-title">🏠 ¿Cómo es nuestro local?</h2>
+      <p class="lead mb-5" data-translate="local-text">Un espacio acogedor con terraza, zona de barra y amplio salón. Perfecto para tapear, ver el fútbol o celebrar cualquier ocasión. ¡Mira nuestras instalaciones!</p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="1000345540.jpg" alt="Salón interior" class="local-img">
+          <p class="mt-2 fw-semibold" data-translate="local-salon">Salón Interior</p>
+        </div>
+        <div class="col-md-4">
+          <img src="1000345544.jpg" alt="Terraza exterior" class="local-img">
+          <p class="mt-2 fw-semibold" data-translate="local-terraza">Terraza de verano</p>
+        </div>
+        <div class="col-md-4">
+          <img src="1000345545.jpg" alt="Barra del bar" class="local-img">
+          <p class="mt-2 fw-semibold" data-translate="local-barra">Barra bien surtida</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carta -->
+  <section id="carta" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4" data-translate="menu-title">📋 Nuestra Carta</h2>
+      <div class="accordion" id="accordionCarta">
+        <!-- Fríos -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFrios" data-translate="menu-frios">🥗 Fríos y ensaladas</button>
+          </h2>
+          <div id="collapseFrios" class="accordion-collapse collapse" data-bs-parent="#accordionCarta">
+            <div class="accordion-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="aliño">Aliño</span> <span>4.00€ / 6.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="papas">Papas Aliñas</span> <span>4.00€ / 6.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="tomate">Tomate con Melva</span> <span>6.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="ensaladilla">Ensaladilla de la casa</span> <span>4.00€ / 6.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="tosta">Tosta Mojama y Anchoa</span> <span>3.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="rulo">Rulo cabra con cebolla caramelizada</span> <span>3.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="aceitunas">Aceitunas</span> <span>1.00€</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Pescados -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePescados" data-translate="menu-pescados">🐟 Pescados y frituras</button>
+          </h2>
+          <div id="collapsePescados" class="accordion-collapse collapse" data-bs-parent="#accordionCarta">
+            <div class="accordion-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="fritura">Fritura variada</span> <span>16.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="pescado">Pescado Frito</span> <span>5.50€ / 10.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="boquerones">Boquerones</span> <span>5.00€ / 8.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="tortillita">Tortillita de camarones</span> <span>2.50€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="choco">Choco a la plancha</span> <span>10.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="chipiron">Chipirón plancha</span> <span>10.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="pavia">Pavía de bacalao</span> <span>6.00€</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Revueltos -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRevueltos" data-translate="menu-revueltos">🍳 Revueltos y verduras</button>
+          </h2>
+          <div id="collapseRevueltos" class="accordion-collapse collapse" data-bs-parent="#accordionCarta">
+            <div class="accordion-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="revuelto">Revuelto de la casa</span> <span>8.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="croquetas">Surtido de croquetas</span> <span>5.00€ / 9.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="calamares">Calamares del campo</span> <span>6.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="berenjenas">Berenjenas miel de caña</span> <span>4.50€ / 8.00€</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Carnes -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCarnes" data-translate="menu-carnes">🥩 Carnes y plancha</button>
+          </h2>
+          <div id="collapseCarnes" class="accordion-collapse collapse" data-bs-parent="#accordionCarta">
+            <div class="accordion-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="montaditos">Montaditos</span> <span>3.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="alitas">Alitas de Pollo</span> <span>7.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="cachopo">Cachopo</span> <span>12.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="milhojas">Milhojas solomillo miel y mostaza</span> <span>9.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="parrillada">Parrillada Ibérica</span> <span>17.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="flamenquin">Flamenquín</span> <span>7.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="carrillada">Carrillada al Pedro Ximénez</span> <span>5.00€ / 9.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="serranito">Serranito</span> <span>6.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="solomillo">Solomillo al whisky/roquefort/pimienta</span> <span>5.00€ / 10.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="lagartito">Lagartito</span> <span>7.50€ / 14.00€</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Arroces -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseArroces" data-translate="menu-arroces">🍚 Arroces</button>
+          </h2>
+          <div id="collapseArroces" class="accordion-collapse collapse" data-bs-parent="#accordionCarta">
+            <div class="accordion-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="risoto">Risoto carbonara ibérica</span> <span>7.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="arroz-negro">Arroz negro con alioli</span> <span>7.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="paella">Paella (por encargo)</span> <span>8.00€</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Bocadillos -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinas" data-translate="menu-minas">🍔 Minas y bocadillos</button>
+          </h2>
+          <div id="collapseMinas" class="accordion-collapse collapse" data-bs-parent="#accordionCarta">
+            <div class="accordion-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="hsimple">Hamburguesa Simple</span> <span>3.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="hqueso">Hamburguesa queso</span> <span>3.50€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="hcompleta">Hamburguesa Completa</span> <span>4.50€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="lagrimitas">Lagrimitas de pollo</span> <span>6.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="burrito">Burrito de pollo</span> <span>4.50€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="perrito">Perrito caliente</span> <span>3.00€</span></li>
+                <li class="list-group-item d-flex justify-content-between"><span data-translate="pinchito">Pinchito de pollo</span> <span>3.00€</span></li>
+              </ul>
+              <p class="mt-2 text-muted" data-translate="pan-salsas">🥖 Pan y servicios 0.60€ | 🍶 Salsas 0.60€</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-center mt-4" data-translate="fuera-carta">* Consulta nuestros platos fuera de carta y sugerencias del día</p>
+    </div>
+  </section>
+
+  <!-- Horario -->
+  <section id="horario" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" data-translate="horario-title">🕒 Horario</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <table class="table table-bordered bg-white shadow-sm">
+            <thead class="table-warning">
+              <tr><th data-translate="dias">Días</th><th data-translate="horario-th">Horario</th></tr>
+            </thead>
+            <tbody>
+              <tr><td data-translate="lv">Lunes a Viernes</td><td>8:30 – 17:00</td></tr>
+              <tr><td data-translate="sd">Sábados y Domingos</td><td>12:30 – 17:30</td></tr>
+            </tbody>
+          </table>
+          <p class="fw-bold"><i class="bi bi-geo-alt-fill text-danger"></i> <span data-translate="polideportivo">Polideportivo de Espartinas</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ubicación -->
+  <section id="ubicacion" class="py-5 bg-white">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3" data-translate="donde-title">📍 Dónde estamos</h2>
+      <p class="lead" data-translate="direccion">Av. María Luisa Domínguez y Pérez de Vargas, Espartinas, Andalucía, España</p>
+      <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
+        <iframe src="https://www.google.com/maps?q=Av.+Mar%C3%ADa+Luisa+Dom%C3%ADnguez+y+P%C3%A9rez+de+Vargas,+Espartinas&output=embed"
+          style="border:0;" allowfullscreen="" loading="lazy" title="Mapa de ubicación"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h2 class="h5 fw-bold d-flex align-items-center">
+            <img src="logo.jpg" alt="Bar La Piscina logo" width="40" height="40" class="me-2 rounded-circle">
+            <span data-translate="brand">Bar La Piscina</span>
+          </h2>
+          <p data-translate="footer-desc">El punto de encuentro en el Polideportivo de Espartinas. Tapas, cerveza y buen fútbol.</p>
+          <div>
+            <a href="#" class="text-white me-2"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-tiktok fs-5"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h2 class="h5 fw-bold" data-translate="contacto-title">📞 Contacto</h2>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-telephone-fill me-2"></i> <a href="tel:645390821" class="text-white text-decoration-none">645 39 08 21</a></li>
+            <li><i class="bi bi-geo-alt-fill me-2"></i> <span data-translate="direccion">Av. María Luisa Domínguez y Pérez de Vargas, Espartinas</span></li>
+            <li><i class="bi bi-clock me-2"></i> <span data-translate="footer-horario">L-V: 8:30-17:00 | S-D: 12:30-17:30</span></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h2 class="h5 fw-bold" data-translate="enlaces-title">🚀 Enlaces rápidos</h2>
+          <ul class="list-unstyled">
+            <li><a href="#carta" class="text-white text-decoration-none" data-translate="nav-carta">Carta</a></li>
+            <li><a href="#horario" class="text-white text-decoration-none" data-translate="nav-horario">Horario</a></li>
+            <li><a href="#ubicacion" class="text-white text-decoration-none" data-translate="nav-ubicacion">Cómo llegar</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="bg-light">
+      <div class="text-center">
+        <p class="mb-1">&copy; 2025 Bar La Piscina – Espartinas</p>
+        <p>
+          <a href="https://validator.w3.org/nu/?doc=URL_DE_TU_WEB">
+            <img src="https://www.w3.org/Icons/valid-html401" alt="HTML válido" height="31">
+          </a>
+          <a href="https://jigsaw.w3.org/css-validator/validator?uri=URL_DE_TU_WEB/css/estilo.css">
+            <img src="https://www.w3.org/Icons/valid-css" alt="CSS válido" height="31">
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script de cambio de idioma -->
+  <script>
+    const translations = {
+      es: {
+        brand: "Bar La Piscina",
+        "nav-inicio": "🏠 Inicio",
+        "nav-carta": "📋 Carta",
+        "nav-horario": "🕒 Horario",
+        "nav-ubicacion": "📍 Dónde estamos",
+        lang: "🌐 Idioma",
+        "hero-title": "🍻 Bar La Piscina",
+        "hero-text": "Tapas caseras, Cruzcampo bien fría y el mejor ambiente junto al polideportivo",
+        "btn-carta": "📋 Ver carta",
+        "btn-llamar": "📞 Llamar ahora",
+        "welcome-title": "👋 Bienvenidos al Bar La Piscina",
+        "welcome-text": "En el corazón del Polideportivo de Espartinas, te ofrecemos desayunos desde las 8:30, almuerzos de cuchara, tapas variadas y la mejor compañía. Productos frescos, cocina de siempre y, por supuesto, <strong>Cruzcampo Especial siempre a punto</strong>. ¡Ven en familia o con amigos!",
+        "local-title": "🏠 ¿Cómo es nuestro local?",
+        "local-text": "Un espacio acogedor con terraza, zona de barra y amplio salón. Perfecto para tapear, ver el fútbol o celebrar cualquier ocasión. ¡Mira nuestras instalaciones!",
+        "local-salon": "Salón Interior",
+        "local-terraza": "Terraza de verano",
+        "local-barra": "Barra bien surtida",
+        "menu-title": "📋 Nuestra Carta",
+        "menu-frios": "🥗 Fríos y ensaladas",
+        "menu-pescados": "🐟 Pescados y frituras",
+        "menu-revueltos": "🍳 Revueltos y verduras",
+        "menu-carnes": "🥩 Carnes y plancha",
+        "menu-arroces": "🍚 Arroces",
+        "menu-minas": "🍔 Minas y bocadillos",
+        aliño: "Aliño",
+        papas: "Papas Aliñas",
+        tomate: "Tomate con Melva",
+        ensaladilla: "Ensaladilla de la casa",
+        tosta: "Tosta Mojama y Anchoa",
+        rulo: "Rulo cabra con cebolla caramelizada",
+        aceitunas: "Aceitunas",
+        fritura: "Fritura variada",
+        pescado: "Pescado Frito",
+        boquerones: "Boquerones",
+        tortillita: "Tortillita de camarones",
+        choco: "Choco a la plancha",
+        chipiron: "Chipirón plancha",
+        pavia: "Pavía de bacalao",
+        revuelto: "Revuelto de la casa",
+        croquetas: "Surtido de croquetas",
+        calamares: "Calamares del campo",
+        berenjenas: "Berenjenas miel de caña",
+        montaditos: "Montaditos",
+        alitas: "Alitas de Pollo",
+        cachopo: "Cachopo",
+        milhojas: "Milhojas solomillo miel y mostaza",
+        parrillada: "Parrillada Ibérica",
+        flamenquin: "Flamenquín",
+        carrillada: "Carrillada al Pedro Ximénez",
+        serranito: "Serranito",
+        solomillo: "Solomillo al whisky/roquefort/pimienta",
+        lagartito: "Lagartito",
+        risoto: "Risoto carbonara ibérica",
+        "arroz-negro": "Arroz negro con alioli",
+        paella: "Paella (por encargo)",
+        hsimple: "Hamburguesa Simple",
+        hqueso: "Hamburguesa queso",
+        hcompleta: "Hamburguesa Completa",
+        lagrimitas: "Lagrimitas de pollo",
+        burrito: "Burrito de pollo",
+        perrito: "Perrito caliente",
+        pinchito: "Pinchito de pollo",
+        "pan-salsas": "🥖 Pan y servicios 0.60€ | 🍶 Salsas 0.60€",
+        "fuera-carta": "* Consulta nuestros platos fuera de carta y sugerencias del día",
+        "horario-title": "🕒 Horario",
+        dias: "Días",
+        "horario-th": "Horario",
+        lv: "Lunes a Viernes",
+        sd: "Sábados y Domingos",
+        polideportivo: "Polideportivo de Espartinas",
+        "donde-title": "📍 Dónde estamos",
+        direccion: "Av. María Luisa Domínguez y Pérez de Vargas, Espartinas, Andalucía, España",
+        "contacto-title": "📞 Contacto",
+        "footer-horario": "L-V: 8:30-17:00 | S-D: 12:30-17:30",
+        "enlaces-title": "🚀 Enlaces rápidos",
+        "footer-desc": "El punto de encuentro en el Polideportivo de Espartinas. Tapas, cerveza y buen fútbol."
+      },
+      en: {
+        brand: "Bar La Piscina",
+        "nav-inicio": "🏠 Home",
+        "nav-carta": "📋 Menu",
+        "nav-horario": "🕒 Schedule",
+        "nav-ubicacion": "📍 Location",
+        lang: "🌐 Language",
+        "hero-title": "🍻 Bar La Piscina",
+        "hero-text": "Homemade tapas, ice-cold Cruzcampo and the best atmosphere next to the sports center",
+        "btn-carta": "📋 See menu",
+        "btn-llamar": "📞 Call now",
+        "welcome-title": "👋 Welcome to Bar La Piscina",
+        "welcome-text": "In the heart of the Espartinas Sports Center, we offer breakfast from 8:30, homemade lunches, a variety of tapas and great company. Fresh products, traditional cuisine and, of course, <strong>Cruzcampo Especial always ready</strong>. Come with family or friends!",
+        "local-title": "🏠 Our place",
+        "local-text": "A cozy space with a terrace, bar area and large lounge. Perfect for tapas, watching football or celebrating any occasion. Check out our facilities!",
+        "local-salon": "Main lounge",
+        "local-terraza": "Summer terrace",
+        "local-barra": "Well-stocked bar",
+        "menu-title": "📋 Our Menu",
+        "menu-frios": "🥗 Cold dishes & salads",
+        "menu-pescados": "🐟 Fish & fried",
+        "menu-revueltos": "🍳 Scrambled & vegetables",
+        "menu-carnes": "🥩 Meat & grill",
+        "menu-arroces": "🍚 Rice",
+        "menu-minas": "🍔 Sandwiches & burgers",
+        aliño: "Aliño (marinated potatoes)",
+        papas: "Papas Aliñas",
+        tomate: "Tomato with Melva (tuna)",
+        ensaladilla: "Russian salad (house style)",
+        tosta: "Tosta with Mojama and Anchovy",
+        rulo: "Goat cheese roll with caramelized onion",
+        aceitunas: "Olives",
+        fritura: "Mixed fried fish",
+        pescado: "Fried fish",
+        boquerones: "Anchovies",
+        tortillita: "Shrimp fritters",
+        choco: "Grilled cuttlefish",
+        chipiron: "Grilled baby squid",
+        pavia: "Cod pavia (batter-fried cod)",
+        revuelto: "House scramble",
+        croquetas: "Assorted croquettes",
+        calamares: "Country-style calamari",
+        berenjenas: "Aubergine with cane honey",
+        montaditos: "Montaditos (small sandwiches)",
+        alitas: "Chicken wings",
+        cachopo: "Cachopo (breaded veal with ham & cheese)",
+        milhojas: "Pork loin mille-feuille with honey & mustard",
+        parrillada: "Iberian mixed grill",
+        flamenquin: "Flamenquín (breaded pork roll)",
+        carrillada: "Pork cheeks in Pedro Ximénez sauce",
+        serranito: "Serranito (pork loin, ham & pepper)",
+        solomillo: "Pork loin with whisky/roquefort/pepper",
+        lagartito: "Lagartito (pork sirloin)",
+        risoto: "Iberian carbonara risotto",
+        "arroz-negro": "Black rice with alioli",
+        paella: "Paella (on request)",
+        hsimple: "Simple Burger",
+        hqueso: "Cheese Burger",
+        hcompleta: "Complete Burger",
+        lagrimitas: "Chicken tears (strips)",
+        burrito: "Chicken burrito",
+        perrito: "Hot dog",
+        pinchito: "Chicken skewer",
+        "pan-salsas": "🥖 Bread & service 0.60€ | 🍶 Sauces 0.60€",
+        "fuera-carta": "* Ask about our daily specials and off-menu dishes",
+        "horario-title": "🕒 Schedule",
+        dias: "Days",
+        "horario-th": "Hours",
+        lv: "Monday to Friday",
+        sd: "Saturday & Sunday",
+        polideportivo: "Espartinas Sports Center",
+        "donde-title": "📍 Location",
+        direccion: "Av. María Luisa Domínguez y Pérez de Vargas, Espartinas, Andalusia, Spain",
+        "contacto-title": "📞 Contact",
+        "footer-horario": "Mon-Fri: 8:30-17:00 | Sat-Sun: 12:30-17:30",
+        "enlaces-title": "🚀 Quick links",
+        "footer-desc": "The meeting point in Espartinas Sports Center. Tapas, beer & good football."
+      }
+    };
+
+    function setLanguage(lang) {
+      localStorage.setItem('lang', lang);
+      applyLanguage(lang);
+    }
+
+    function applyLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-translate]').forEach(el => {
+        const key = el.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+          // Preservar elementos hijos (como <strong>) si el contenido HTML
+          if (translations[lang][key].includes('<')) {
+            el.innerHTML = translations[lang][key];
+          } else {
+            el.textContent = translations[lang][key];
+          }
+        }
+      });
+    }
+    const savedLang = localStorage.getItem('lang');
+    const defaultLang = savedLang || (navigator.language.startsWith('en') ? 'en' : 'es');
+    applyLanguage(defaultLang);
+  </script>
+</body>
+</html>
